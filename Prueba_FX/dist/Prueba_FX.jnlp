@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Prueba_FX.jnlp">
+  <information>
+    <title>Prueba_FX</title>
+    <vendor>PERSONAL</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Prueba_FX.jar" size="14710" download="eager" />
+    <jar href="lib/controlsfx-8.0.6_20.jar" size="856539" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Prueba_FX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="ch.makery.address.MainApp"  name="Prueba_FX" />
+  <update check="always"/>
+</jnlp>
