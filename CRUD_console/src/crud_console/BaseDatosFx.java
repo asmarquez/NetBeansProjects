@@ -17,19 +17,18 @@ import javax.swing.JOptionPane;
  * @author mami
  */
 public class BaseDatosFx {
-    
+
     public static Connection connection;
     public static PreparedStatement preparedStatement;
     public static ResultSet resultSet;
+
     //String query;
-    
     public static List<producto> consultar(String query) {
-        
+
         List<producto> outList = new ArrayList<producto>();
-        
-        
+
         connection = Conexion.getConnection();
-        
+
         try {
 
             preparedStatement = connection.prepareStatement(query);
@@ -38,24 +37,19 @@ public class BaseDatosFx {
 
             //resultSet.next();
             //String codigo = 
+            //System.out.print("N col " + resultSet.getMetaData().getColumnCount());
+            int nCol = resultSet.getMetaData().getColumnCount();
+            
+
             while (resultSet.next()) {
-
-                outList.add(new producto(resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getString(4),
-                        resultSet.getString(5),
-                        resultSet.getString(6),
-                        resultSet.getString(7),
-                        resultSet.getString(8),
-                        resultSet.getString(9),
-                        resultSet.getString(10)));
-
-                //for (int i = 1; i < 11; i++) {
-                //    //System.out.print(resultSet.getMetaData().getColumnLabel(i).toUpperCase() + ":   ");
-                //    System.out.print(resultSet.getString(i) + "\t");
-                //}
-                //System.out.print("\n");
+                
+                producto auxProducto = new producto();
+                for (int i = 1; i <= nCol; i++) {
+                    auxProducto.setDataByIndex(resultSet.getString(i), i);
+                    //System.out.println(resultSet.getString(i));
+                }
+                System.out.print("\n");    
+                outList.add(auxProducto);
             }
 
         } catch (Exception e) {
@@ -63,9 +57,8 @@ public class BaseDatosFx {
             JOptionPane.showMessageDialog(null, "Error en busqueda");
 
         }
-        
-        
+
         return outList;
-    }  
-    
+    }
+
 }

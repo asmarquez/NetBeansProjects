@@ -30,9 +30,9 @@ public class CRUD_console {
         productoData = BaseDatosFx.consultar(query);
         
         System.out.println("TERMINADO ");
-        producto resProducto = productoData.get(2);
-        System.out.println(resProducto.getId());
-        System.out.println(resProducto.getCodigo());
+        producto resProducto = productoData.get(578);
+        System.out.print(resProducto.getId() + "\t");
+        System.out.print(resProducto.getCodigo());
 
     }
 

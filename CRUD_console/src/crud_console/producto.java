@@ -35,6 +35,9 @@ public class producto {
         this.ubicacion = ubicacion;
         this.distribuidor = distribuidor;
     }
+
+    public producto() {
+    }
             
     
     
@@ -126,8 +129,77 @@ public class producto {
     }
     
     
+    public String getDataByIndex(int index) {
+        String rValue = null;
+        
+        switch (index) {
+        
+            case 1:
+                rValue = id;
+                break;
+                
+            case 2:
+                rValue = codigo;
+            case 3:
+                rValue = descripcion;
+            case 4:
+                rValue = cantidad;
+            case 5:
+                rValue = precio_venta;
+            case 6:
+                rValue = precio_mayoreo;
+            case 7:
+                rValue = precio_distribuidor;
+            case 8:
+                rValue = ecg;
+            case 9:
+                rValue = ubicacion;
+            case 10:
+                rValue = distribuidor;
+        
+        
+        }
+        return rValue;
+    }
     
-    
-    
+    public void setDataByIndex(String Data, int index) {
+        
+        switch (index) {
+        
+            case 1:
+                this.id = Data;
+                break;
+            case 2:
+                this.codigo = Data;
+                break;
+            case 3:
+                this.descripcion = Data;
+                break;
+            case 4:
+                this.cantidad = Data;
+                break;
+            case 5:
+                this.precio_venta = Data;
+                break;
+            case 6:
+                this.precio_mayoreo = Data;
+                break;
+            case 7:
+                this.precio_distribuidor = Data;
+                break;
+            case 8:
+                this.ecg = Data;
+                break;
+            case 9:
+                this.ubicacion = Data;
+                break;
+            case 10:
+                this.distribuidor = Data;
+                break;
+        
+        }
+        
+        //System.out.print(Data + "\t");
+    }
     
 }
