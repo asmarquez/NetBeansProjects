@@ -8,6 +8,8 @@ package crud_console;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -29,10 +31,16 @@ public class CRUD_console {
         
         productoData = BaseDatosFx.consultar(query);
         
-        System.out.println("TERMINADO ");
-        producto resProducto = productoData.get(578);
-        System.out.print(resProducto.getId() + "\t");
-        System.out.print(resProducto.getCodigo());
+        try {
+
+            //System.out.println("TERMINADO ");
+            producto resProducto = productoData.get(200000);
+
+            System.out.print(resProducto.getDataByIndex(12) + "\t");
+        } catch (Exception ex) {
+            System.out.println(ex);
+        } 
+       
 
     }
 

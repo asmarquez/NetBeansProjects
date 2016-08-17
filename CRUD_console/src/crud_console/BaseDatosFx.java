@@ -48,7 +48,7 @@ public class BaseDatosFx {
                     auxProducto.setDataByIndex(resultSet.getString(i), i);
                     //System.out.println(resultSet.getString(i));
                 }
-                System.out.print("\n");    
+                //System.out.print("\n");    
                 outList.add(auxProducto);
             }
 

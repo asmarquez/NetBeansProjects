@@ -10,9 +10,9 @@ package crud_console;
  * @author mami
  */
 public class producto {
-    
-   //
-    public String id ;
+
+    //
+    public String id;
     public String codigo;
     public String descripcion;
     public String cantidad;
@@ -22,6 +22,8 @@ public class producto {
     public String ecg;
     public String ubicacion;
     public String distribuidor;
+
+    Exception MaxIndex = new Exception("Error Index mayor al maximo");
 
     public producto(String id, String codigo, String descripcion, String cantidad, String precio_venta, String precio_mayoreo, String precio_distribuidor, String ecg, String ubicacion, String distribuidor) {
         this.id = id;
@@ -38,10 +40,7 @@ public class producto {
 
     public producto() {
     }
-            
-    
-    
-    
+
     public producto(String id, String codigo, String descripcion) {
         this.id = id;
         this.codigo = codigo;
@@ -127,45 +126,56 @@ public class producto {
     public void setDistribuidor(String distribuidor) {
         this.distribuidor = distribuidor;
     }
-    
-    
-    public String getDataByIndex(int index) {
+
+    public String getDataByIndex(int index) throws Exception {
         String rValue = null;
-        
+
         switch (index) {
-        
+
             case 1:
                 rValue = id;
                 break;
-                
+
             case 2:
                 rValue = codigo;
+                break;
             case 3:
                 rValue = descripcion;
+                break;
             case 4:
                 rValue = cantidad;
+                break;
             case 5:
                 rValue = precio_venta;
+                break;
             case 6:
                 rValue = precio_mayoreo;
+                break;
             case 7:
                 rValue = precio_distribuidor;
+                break;
             case 8:
                 rValue = ecg;
+                break;
             case 9:
                 rValue = ubicacion;
+                break;
             case 10:
                 rValue = distribuidor;
-        
-        
+                break;
+            default:
+                System.out.println("Error Index mayor al maximo");
+                throw MaxIndex;
+
+            //break;
         }
         return rValue;
     }
-    
-    public void setDataByIndex(String Data, int index) {
-        
+
+    public void setDataByIndex(String Data, int index) throws Exception {
+
         switch (index) {
-        
+
             case 1:
                 this.id = Data;
                 break;
@@ -196,10 +206,13 @@ public class producto {
             case 10:
                 this.distribuidor = Data;
                 break;
-        
+            default:
+                System.out.println("Error Index mayor al maximo");
+                throw MaxIndex;
+
         }
-        
+
         //System.out.print(Data + "\t");
     }
-    
+
 }

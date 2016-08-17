@@ -1,5 +1,50 @@
-.background {
-    -fx-background-color: #1d1d1d;
+
+
+.root { -p0-color: #44B4EA  ;	/* Main Primary color */
+        -p1-color: #01608E ;
+        -p2-color: #01608E ;
+        -p3-color: #FAFAFA ;
+        -p4-color: #0E3B51 }
+
+.menu-bar, .split-pane:vertical .split-pane-divider {
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-p2-color,-30%), derive(-p2-color,-60%)),
+        linear-gradient(to bottom, -p2-color 2%, -p4-color 98%);
+    
+    /*-fx-background-color: -p4-color;*/
+}
+
+.tool-bar:horizontal {
+    /*    -fx-background-color: -p4-color;*/
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-p2-color,-10%), derive(-p2-color,-10%)),
+        linear-gradient(to bottom, -p2-color 2%, -p4-color 98%);
+}
+
+.text-field{
+    -fx-background-color: -p3-color;
+    -fx-background-radius: 2; 
+}
+
+.menu .label {
+    -fx-font-size: 13pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: -p3-color;
+    
+}
+
+.menu-item .label{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: -p4-color;
+}
+
+.context-menu {
+    -fx-background-color: -p3-color;
+}
+
+/*.background {
+    -fx-background-color: -p1-color;
 }
 
 .label {
@@ -24,7 +69,7 @@
 }
 
 .table-view {
-    -fx-base: #1d1d1d;
+    -fx-base: -p1-color;
     -fx-control-inner-background: #1d1d1d;
     -fx-background-color: #1d1d1d;
     -fx-table-cell-border-color: transparent;
@@ -69,13 +114,14 @@
     -fx-padding: 1 0 0 0;
 }
 
-.menu-bar {
+.menu-bar, .split-pane:vertical .split-pane-divider {
     -fx-background-color: derive(#1d1d1d,20%);
 }
 
 .context-menu , .tool-bar, .tab-header-background,.tab-pane .tab-header-area .headers-region{
     -fx-background-color: derive(#1d1d1d,50%);
 }
+
 
 .menu-bar .label {
     -fx-font-size: 14pt;
@@ -91,18 +137,19 @@
 .text-field {
     -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
+    -fx-background-color: -p0-color; derive(#1d1d1d,99%); 
 }
 
-/* 
+ 
  * Metro style Push Button
  * Author: Pedro Duque Vieira
  * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
- */
-.button {
+ 
+.button,  .tab-pane:top .tab-header-area .headers-region .tab:selected:top {
     -fx-padding: 5 22 5 22;   
     -fx-border-color: #e2e2e2;
     -fx-border-width: 0;
-    -fx-background-radius: 0;
+    -fx-background-radius: 0; 
     -fx-background-color: #1d1d1d;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 12pt;
@@ -140,4 +187,4 @@
 
 .button:default:hover {
     -fx-background-color: derive(-fx-focus-color,30%);
-}
+}*/
