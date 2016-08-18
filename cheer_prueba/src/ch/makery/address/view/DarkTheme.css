@@ -1,93 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-ago-2016, 13:05:08
+    Author     : Juan
+*/
 
 
-.root { -p0-color: #44B4EA  ;	/* Main Primary color */
-        -p1-color: #01608E ;
-        -p2-color: #01608E ;
-        -p3-color: #FAFAFA ;
-        -p4-color: #0E3B51 }
-
-.menu-bar, .split-pane:vertical .split-pane-divider {
-    -fx-background-color:
-        linear-gradient(to bottom, derive(-p2-color,-30%), derive(-p2-color,-60%)),
-        linear-gradient(to bottom, -p2-color 2%, -p4-color 98%);
+.background {
+    /*-fx-background-color: #1d1d1d; */
+    -light-black: rgb(74, 75, 78);
+    -dark-highlight: rgb(87, 89, 92);
+    -dark-black: rgb(39, 40, 40);
+    -darkest-black: rgb(5, 5, 5);
+    -mid-gray: rgb(116, 122, 127);
+    -fx-background-color: -mid-gray;
     
-    /*-fx-background-color: -p4-color;*/
-}
-
-.tool-bar:horizontal {
-    /*    -fx-background-color: -p4-color;*/
-    -fx-background-color:
-        linear-gradient(to bottom, derive(-p2-color,-10%), derive(-p2-color,-10%)),
-        linear-gradient(to bottom, -p2-color 2%, -p4-color 98%);
-}
-
-.text-field{
-    -fx-background-color: -p3-color;
-    -fx-background-radius: 2; 
-}
-
-.iconOpen {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
-    -fx-border-width: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: -p4-color;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: #d8d8d8;
-/*    -fx-background-image:  url("i1.png");*/
-}
-
-.menu .label {
-    -fx-font-size: 13pt;
-    -fx-font-family: "Segoe UI Semibold";
-    -fx-text-fill: -p3-color;
-    
-}
-
-.menu-item .label{
-    -fx-font-size: 11pt;
-    -fx-font-family: "Segoe UI Semibold";
-    -fx-text-fill: -p4-color;
-}
-
-.context-menu {
-    -fx-background-color: -p3-color;
-}
-
-/*.background {
-    -fx-background-color: -p1-color;
 }
 
 .label {
-    -fx-font-size: 8pt;
+    -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
 }
 
 .label-bright {
-    -fx-font-size: 8pt;
+    -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 1;
 }
 
 .label-header {
-    -fx-font-size: 12pt;
+    -fx-font-size: 32pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-opacity: 1;
 }
 
 .table-view {
-    -fx-base: -p1-color;
+    -fx-base: #1d1d1d;
     -fx-control-inner-background: #1d1d1d;
     -fx-background-color: #1d1d1d;
     -fx-table-cell-border-color: transparent;
     -fx-table-header-border-color: transparent;
     -fx-padding: 5;
+    -fx-font-size: 8pt;
+    
 }
+
 
 .table-view .column-header-background {
     -fx-background-color: transparent;
@@ -106,16 +70,16 @@
 }
 
 .table-view .column-header .label {
-    -fx-font-size: 10pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-alignment: center-left;
     -fx-opacity: 1;
 }
 
-.table-view:focused .table-row-cell:filled:focused:selected {
+/*.table-view:focused .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-focus-color;
-}
+}*/
 
 .split-pane:horizontal > .split-pane-divider {
     -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
@@ -126,51 +90,78 @@
     -fx-padding: 1 0 0 0;
 }
 
-.menu-bar, .split-pane:vertical .split-pane-divider {
-    -fx-background-color: derive(#1d1d1d,20%);
+.menu-bar {
+    /*-fx-background-color: derive(#1d1d1d,20%);*/
+    -light-black: rgb(74, 75, 78);
+    -dark-black: rgb(39, 40, 40);
+    -fx-base: -dark-black;
+    -fx-font-size: 11pt;
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, -light-black 2%, -dark-black 98%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: .9em 0.416667em .9em 0.416667em;
+    -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);
+    -fx-background-radius: 0em;
+    
+    
+    
 }
 
-.context-menu , .tool-bar, .tab-header-background,.tab-pane .tab-header-area .headers-region{
-    -fx-background-color: derive(#1d1d1d,50%);
+.context-menu {
+    /*-fx-background-color: derive(#1d1d1d,50%);*/
+    -light-black: derive(rgb(74, 75, 78),90%);
+    -dark-black: derive(rgb(39, 40, 40),90%);
+    -fx-base: -dark-black;
+    -fx-font-size: 11pt;
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, -light-black 2%, -dark-black 98%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: .9em 0.416667em .9em 0.416667em;
+    -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);
 }
 
+
+ 
 
 .menu-bar .label {
-    -fx-font-size: 14pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-opacity: 0.9;
 }
 
-.menu .left-container{
+
+.menu .left-container {
     -fx-background-color: black;
 }
 
 .text-field {
     -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
-    -fx-background-color: -p0-color; derive(#1d1d1d,99%); 
 }
 
- 
+/* 
  * Metro style Push Button
  * Author: Pedro Duque Vieira
  * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
- 
-.button,  .tab-pane:top .tab-header-area .headers-region .tab:selected:top {
+ */
+.button {
     -fx-padding: 5 22 5 22;   
     -fx-border-color: #e2e2e2;
-    -fx-border-width: 0;
-    -fx-background-radius: 0; 
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
     -fx-background-color: #1d1d1d;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 12pt;
+    -fx-font-size: 11pt;
     -fx-text-fill: #d8d8d8;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    
 }
 
-.button:hover {
-    -fx-background-color: #3a3a3a;
+ .menu-item:focused , .button:hover, .menu:hover, .table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #7a7a7a;
 }
 
 .button:pressed, .button:default:hover:pressed {
@@ -199,4 +190,4 @@
 
 .button:default:hover {
     -fx-background-color: derive(-fx-focus-color,30%);
-}*/
+}
