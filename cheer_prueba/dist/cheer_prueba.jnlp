@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="cheer_prueba.jar" size="71460" download="eager" />
+    <jar href="cheer_prueba.jar" size="46018" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="cheer_prueba" >
     <param name="requiredFXVersion" value="8.0+"/>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,11 +8,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="964.0" stylesheets="@Minimal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <VBox prefHeight="596.0" prefWidth="74.0" styleClass="vboxIcono" BorderPane.alignment="CENTER">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="964.0" stylesheets="@themes/Minimal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="63.0" prefWidth="964.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuButton contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="64.0" prefWidth="88.0" styleClass="buttonInit">
+            <MenuButton mnemonicParsing="false" prefHeight="64.0" prefWidth="88.0" styleClass="buttonInit" wrapText="true">
               <items>
                   <Menu mnemonicParsing="false" text="Unspecified Menu">
                     <items>
@@ -36,7 +37,7 @@
                   <Tooltip text="Empty Tooltip" />
                </tooltip>
             </MenuButton>
-            <MenuButton contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="64.0" prefWidth="88.0" styleClass="buttonInit">
+            <MenuButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="88.0" styleClass="buttonMenu2" wrapText="true">
                <items>
                   <Menu mnemonicParsing="false" text="Unspecified Menu">
                      <items>
@@ -57,8 +58,11 @@
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                </items>
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip>
             </MenuButton>
-            <MenuButton contentDisplay="CENTER" layoutX="10.0" layoutY="74.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="64.0" prefWidth="88.0" styleClass="buttonInit">
+            <MenuButton layoutX="102.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="88.0" styleClass="buttonMenu1" wrapText="true">
                <items>
                   <Menu mnemonicParsing="false" text="Unspecified Menu">
                      <items>
@@ -79,8 +83,11 @@
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                </items>
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip>
             </MenuButton>
-            <MenuButton contentDisplay="CENTER" layoutX="10.0" layoutY="138.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="64.0" prefWidth="88.0" styleClass="buttonInit">
+            <MenuButton layoutX="194.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="88.0" styleClass="buttonMenu3" wrapText="true">
                <items>
                   <Menu mnemonicParsing="false" text="Unspecified Menu">
                      <items>
@@ -101,8 +108,56 @@
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                   <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                </items>
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip>
             </MenuButton>
+            <MenuButton layoutX="286.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="88.0" styleClass="buttonMenu1" wrapText="true">
+               <items>
+                  <Menu mnemonicParsing="false" text="Unspecified Menu">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Action 1">
+                     <graphic>
+                        <Slider />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Action 2">
+                     <graphic>
+                        <TextField />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+               <tooltip>
+                  <Tooltip text="Empty Tooltip" />
+               </tooltip>
+            </MenuButton>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="vboxIcono" HBox.hgrow="ALWAYS" />
+            <VBox prefHeight="63.0" prefWidth="71.0" styleClass="vboxIcono">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="button_mainTools" text="...">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="button_mainTools" text="X">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
          </children>
-      </VBox>
-   </left>
+      </HBox>
+   </top>
 </BorderPane>

@@ -8,8 +8,7 @@ package crud_console;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 
 /**
@@ -33,10 +32,12 @@ public class CRUD_console {
         
         try {
 
-            //System.out.println("TERMINADO ");
-            producto resProducto = productoData.get(200000);
+            
+            producto resProducto = productoData.get(5100);
 
-            System.out.print(resProducto.getDataByIndex(12) + "\t");
+//            for (int i = 1; i<=10 ; i++)
+//                System.out.print(resProducto.getDataByIndex(i) + "\t");
+            
         } catch (Exception ex) {
             System.out.println(ex);
         } 

@@ -14,196 +14,131 @@ and open the template in the editor.
         -p2-color: #72D1FF ;/* menos celeste*/
         -p3-color: #F1F1F1 ; /*blanco*/
         -p4-color: #113647 ; /*negro*/
-        
+
+        -p5-color: #FF3434 ; /* rojo positivo*/
+        -p6-color: #6C0404 ; /* rojo negativo*/
+
+        -tabla-color:-p3-color;
+
+        -toolBar-color:-p3-color;
+        -tabPane-color:-p3-color;
+
+
+        -labelText-color:-p4-color;
+        -labelMainText-color: -labelText-color;
+
+        -tablaSeparador-color:derive(-fx-base, 80%);
+
+        -boton-color:-p4-color;
+        -botonText-color:-p3-color;
+        -botonHover-color: -p0-color;
+        -botonHoverText-color:-p4-color;
+
+        -botonFocused-color:-p3-color;
+
+        -botonPressed-color: -p2-color;
+        -botonPressedText-color:-p4-color;
+
+        -fondo-color: white;
+        -contenedorIconos-color: -p4-color;
+        -panes-color:  -p3-color ;
+
+
+
 } 
+
+.buttonInit {-fx-background-image: url("icons/p5_p.png");}
+.buttonInit:hover, .buttonInit:pressed,.buttonInit:default:hover:pressed ,
+.buttonInit:showing { -fx-background-image: url("icons/p5_n.png");}
+
+.buttonMenu1 {-fx-background-image: url("icons/p1_p.png");}
+.buttonMenu1:hover, .buttonMenu1:pressed,.buttonMenu1:default:hover:pressed ,
+.buttonMenu1:showing { -fx-background-image: url("icons/p1_n.png");}
+
+.buttonMenu2 {-fx-background-image: url("icons/p2_p.png");}
+.buttonMenu2:hover, .buttonMenu2:pressed,.buttonMenu2:default:hover:pressed ,
+.buttonMenu2:showing { -fx-background-image: url("icons/p2_n.png");}
+
+.buttonMenu3 {-fx-background-image: url("icons/p3_p.png");}
+.buttonMenu3:hover, .buttonMenu3:pressed,.buttonMenu3:default:hover:pressed ,
+.buttonMenu3:showing { -fx-background-image: url("icons/p3_n.png");}
+
 
 
 .background {
-    -fx-background-color: -p3-color;     
+    -fx-background-color: -fondo-color;     
 }
 
-.label {
-    -fx-font-size: 11pt;
-    -fx-font-family: "Segoe UI Semibold";
-    -fx-text-fill: -p4-color;
-    /*-fx-opacity: 0.6;*/
+.split-pane {
+    -fx-background-color: transparent, transparent;
+    -fx-background-insets: 0, 0;
+    -fx-padding: 0;
+}
+.panes-color {
+    -fx-background-color: -panes-color; 
 }
 
-.table-view {
-/*    -fx-base: -p3-color;*/
-/*    -fx-control-inner-background: -p3-color;*/
-    -fx-background-color: -p3-color;
-    -fx-table-cell-border-color: transparent;
-    -fx-table-header-border-color: transparent;
-    -fx-padding: 5;
-    -fx-font-size: 8pt;
-    
-}
-.tab-pane:top .tab-header-area .tab-header-background {
-/*    -fx-base: -p3-color;*/
-/*    -fx-control-inner-background: -p3-color;*/
-    -fx-background-color: derive(-p3-color, -1%);
-    
-    
-}
-
-
-
-
-
-
-.button {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
-    -fx-border-width: 0;
-    -fx-background-radius: 3;
-    -fx-background-color: -p4-color;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 15pt;
-    -fx-text-fill: -p3-color;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
-  
-    
-}
-
-.button:hover {
-    -fx-background-color: -p0-color;
-    -fx-text-fill: -p4-color;
-}
-
-.button:focused {
-    -fx-border-color: -p3-color, -p3-color;
-    -fx-border-width: 0, 0;
-    -fx-border-style: solid, segments(1, 1);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 0 0 0 0, 0;
-}
-
-.button:pressed, .button:default:hover:pressed {
-  -fx-background-color: -p2-color;
-  -fx-text-fill: derive(-p4-color,-40%);
-}
-
-
-.menu-button .arrow {
-    -fx-background-color: transparent;
-}
-
-
-
-.buttonInit {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
-    -fx-border-width: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: -p4-color;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 15pt;
-    -fx-text-fill: -p3-color;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
-    -fx-mark-color: transparent;
-    
-    -fx-background-image: url("p3_w.png");
-    -fx-background-size: 49 49;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;  
-    
-}
-
-
-
-.buttonInit:hover  {
-    -fx-background-color: -p0-color;
-    -fx-text-fill: -p4-color;
-    
-    -fx-background-image: url("p3_b.png");
-    -fx-background-size: 49 49;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;  
-}
-
-.buttonInit:focused {
-    -fx-border-color: -p3-color, -p3-color;
-    -fx-border-width: 0, 0;
-    -fx-border-style: solid, segments(1, 1);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 0 0 0 0, 0;
-}
-
-
-
-
- .buttonInit:pressed, .buttonInit:default:hover:pressed ,  .buttonInit:showing {
-    -fx-background-color: derive(-p2-color,8%);
-    -fx-text-fill: derive(-p4-color,-40%);
-
-    -fx-background-image: url("p3_b.png");
-    -fx-background-size: 49 49;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;  
-}
-
-.menu:focused:showing .arrow, .menu:hover:showing .arrow, .menu:focused .arrow, .menu:showing .arrow {
-    -fx-background-color: -p3-color;
-}
 
 
 .vboxIcono {
-    -fx-background-color: -p4-color;
+    -fx-background-color: -contenedorIconos-color;
 }
 
-.split-pane:vertical .split-pane-divider{
-    -fx-background-color: -p3-color;
+.label {
+
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: -labelText-color;
+    /*-fx-opacity: 0.6;*/
 }
 
-.tool-bar:horizontal{
-    -fx-background-color: -p3-color;
-    -fx-border-width: 0, 0;
+.labelMain {
+    -fx-background-color: -p0-color; 
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: -labelMainText-color;
+    -fx-text-alignment: Center;
+
+    /*-fx-opacity: 0.6;*/
+}
+
+
+
+.table-view {
+    /*    -fx-base: -p3-color;
+        -fx-control-inner-background: -p3-color;*/
+    -fx-background-color: -tabla-color;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 1;
+    -fx-font-size: 7pt;
+
+}
+
+.center-view {
+    /*    -fx-base: -p3-color;
+        -fx-control-inner-background: -p3-color;*/
     
-}
-
-.context-menu {
+    -fx-border-width: 10;
+    -fx-border-color: -fondo-color;
+    -fx-padding: 1;
+    -fx-border-radius: 0;
+   
     
-    
-    -fx-background-color:derive(-p4-color,30%);
-    -fx-opacity: 0.93;   
-    -fx-background-insets: 0, 0 0 1 0;
-/*    -fx-padding: .9em 0.416667em .9em 0.416667em;*/
-    
-    
-}
 
-.context-menu .label{
--fx-text-fill: derive(-p3-color,70%);
--fx-font-size: 15pt;
 
 }
 
 
-.menu-item:focused {
-     -fx-background-color: derive(-p2-color,8%);
-     
-}
 
-.menu-item:focused .label {
-     -fx-text-fill: -p4-color;
-     
-}
+
 
 .table-view .column-header-background {
     -fx-background-color: transparent;
 }
 
-.table-view {
-/*    -fx-base: -p3-color;
-    -fx-control-inner-background: -p3-color;*/
-    -fx-background-color: -p3-color;
-    -fx-table-cell-border-color: transparent;
-    -fx-table-header-border-color: transparent;
-    -fx-padding: 2;
-    -fx-font-size: 7pt;
-    
-}
 
 .table-view .column-header, .table-view .filler {
     -fx-size: 24;
@@ -212,14 +147,129 @@ and open the template in the editor.
     -fx-border-color: 
         transparent
         transparent
-        derive(-fx-base, 80%) 
+        -tablaSeparador-color 
         transparent;
     -fx-border-insets: 0 10 1 0;
 }
 
+
+
+
+.tab-pane:top .tab-header-area .tab-header-background {
+    /*    -fx-base: -p3-color;*/
+    /*    -fx-control-inner-background: -p3-color;*/
+    -fx-background-color: derive(-tabPane-color, -1%);
+
+
+}
+
+
+.button, .menu-button  {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 0;
+    -fx-background-radius: 2;
+    -fx-background-color: -boton-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 15pt;
+    -fx-text-fill: -botonText-color;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+
+
+}
+
+.button_mainTools{
+   -fx-background-radius: 0;  
+}
+
+.button:hover, .menu-button:hover {
+    -fx-background-color: -botonHover-color;
+    -fx-text-fill: -botonHoverText-color;
+}
+
+.button:focused, .menu-button:focused
+{
+    -fx-border-color: -botonFocused-color, -botonFocused-color;
+    -fx-border-width: 0, 0;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 0 0 0 0, 0;
+}
+
+.button:pressed, .button:default:hover:pressed,
+.menu-button:pressed, .menu-button:default:hover:pressed ,  .menu-button:showing
+{
+    -fx-background-color: -botonPressed-color;
+    -fx-text-fill: derive(-botonPressedText-color,-40%);
+}
+
+
+.menu-button .arrow {
+    -fx-background-color: transparent;
+}
+
+.menu-button  {
+    -fx-background-radius: 0;
+    -fx-background-size: 49 49;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;  
+}
+
+
+.menu:focused:showing .arrow, .menu:hover:showing .arrow, .menu:focused .arrow, .menu:showing .arrow {
+    -fx-background-color: -p3-color;
+}
+
+
+.split-pane:vertical .split-pane-divider{
+    -fx-background-color: -p3-color;
+}
+
+.tool-bar:horizontal{
+    -fx-background-color: -toolBar-color;
+    -fx-border-width: 0, 0;
+    -fx-border-color: transparent;
+
+
+}
+
+.context-menu {
+
+
+    -fx-background-color:derive(-p4-color,30%);
+    -fx-opacity: 0.93;   
+    -fx-background-insets: 0, 0 0 1 0;
+    /*    -fx-padding: .9em 0.416667em .9em 0.416667em;*/
+
+
+}
+
+.context-menu .label{
+    -fx-text-fill: derive(-p3-color,70%);
+    -fx-font-size: 15pt;
+
+}
+
+
+.menu-item:focused {
+    -fx-background-color: derive(-p2-color,8%);
+
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: -p4-color;
+
+}
+
 .text-field {
-    -fx-font-size: 12pt;
+    -fx-padding: 5 5 5 5;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 0;
+    -fx-background-radius: 1;
+    -fx-background-color: white;
     -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 15pt;
+
 }
 
 .tab {
@@ -228,9 +278,9 @@ and open the template in the editor.
 
 
 .tab .tab-label {
-     -fx-text-fill: -p3-color;
-     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-     -fx-font-size: 12pt;
+    -fx-text-fill: -p3-color;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12pt;
 }
 
 .tab:selected  {
@@ -239,7 +289,7 @@ and open the template in the editor.
 }
 
 .tab:selected .tab-label  {
-    
+
     -fx-text-fill: -p4-color;
 }
 
