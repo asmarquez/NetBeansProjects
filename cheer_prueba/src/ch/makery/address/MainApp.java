@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -24,7 +25,9 @@ public class MainApp extends Application{
     
     public void start(Stage primaryStage){
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Cheervidetienda");
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.setResizable(false);
+        this.primaryStage.setTitle("MAGI System");
         
         iniciar_RootLayout();
         mostrar_ventas();

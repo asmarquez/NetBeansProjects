@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form>
+            Crimen:<br>
+            <input type="text" name="firstname"><br>
+            Denuncia:<br>
+            <input type="text" name="lastname"><br>   
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other<br>
+            <input type="submit" value="Submit"><br>
+
+            <fieldset>
+                <legend>Personal information:</legend>
+                First name:<br>
+                <input type="text" name="firstname" value="Mickey"><br>
+                Last name:<br>
+                <input type="text" name="lastname" value="Mouse"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Personal information:</legend>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist> 
+
+                User name:<br>
+                <input type="text" name="username"><br>
+                User password:<br>
+                <input type="password" name="psw">
+
+            </fieldset>
+        </form>
+    </body>
+</html>

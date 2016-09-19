@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 /**
  *
  * @author mami
@@ -29,10 +30,18 @@ public class CRUD_console {
         
         productoData = BaseDatosFx.consultar(query);
         
-        System.out.println("TERMINADO ");
-        producto resProducto = productoData.get(2);
-        System.out.println(resProducto.getId());
-        System.out.println(resProducto.getCodigo());
+        try {
+
+            
+            producto resProducto = productoData.get(5100);
+
+//            for (int i = 1; i<=10 ; i++)
+//                System.out.print(resProducto.getDataByIndex(i) + "\t");
+            
+        } catch (Exception ex) {
+            System.out.println(ex);
+        } 
+       
 
     }
 
