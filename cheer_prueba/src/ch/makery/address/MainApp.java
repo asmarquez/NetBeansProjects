@@ -25,7 +25,7 @@ public class MainApp extends Application{
     
     public void start(Stage primaryStage){
         this.primaryStage = primaryStage;
-        primaryStage.initStyle(StageStyle.UTILITY);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setResizable(false);
         this.primaryStage.setTitle("MAGI System");
         

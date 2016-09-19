@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31-ago-2016, 15:17:19
+    Author     : Juan
+*/
+
+body {background-color: black;
+      background-image: url("http://www.mandolinistibustesi.it/wp-content/uploads/2015/08/sfondo_nero.jpeg");
+      align-content: center}
+h1, h2, h3, h4, h5, h6   {color: white;
+              font-size: 500%;
+              text-align: center;}
+p, ul, table, input   {color: red;
+      font-family: courier;
+      font-size: 160%;
+      border: 1px solid powderblue;
+      padding: 30px;
+      margin: 50px;
+}
+
+blockquote    {color: white;
+               font-family: courier;
+               font-size: 100%;
+               border: 1px solid powderblue;
+               padding: 30px;
+               margin: 50px;
+}
+
+#p01 {
+    color: whitesmoke;
+    font-size: 160%;
+}
+
+p.error {
+    color: white;
+}
+
+div.cities {
+    background-color: pink;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+
+
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:pink; background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+
+
