@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-oct-2016 18:44:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Stock" table="stock" catalog="mydb" optimistic-lock="version">
+        <composite-id name="id" class="model.StockId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="distribuidorId" type="int">
+                <column name="distribuidor_id" />
+            </key-property>
+        </composite-id>
+        <property name="codigo" type="string">
+            <column name="codigo" length="45" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="100" />
+        </property>
+        <property name="cantidad" type="big_decimal">
+            <column name="cantidad" precision="8" />
+        </property>
+        <property name="precioVenta" type="big_decimal">
+            <column name="precio_venta" precision="8" scale="3" />
+        </property>
+        <property name="precioMay" type="big_decimal">
+            <column name="precio_may" precision="8" scale="3" />
+        </property>
+        <property name="precioDist" type="big_decimal">
+            <column name="precio_dist" precision="8" scale="3" />
+        </property>
+        <property name="ecg" type="string">
+            <column name="ecg" length="45" />
+        </property>
+        <property name="ubicacion" type="string">
+            <column name="ubicacion" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Prueba.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="34" y="88" zoom="false"/>
+        <Node id="composite.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="number.xhtml" x="402" y="253" zoom="true"/>
+        <Node id="newTemplate.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="response.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="resources/emcomp/email.xhtml" x="150" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

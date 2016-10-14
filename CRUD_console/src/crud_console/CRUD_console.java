@@ -26,17 +26,17 @@ public class CRUD_console {
         
         String query;
         
-        query = "SELECT * FROM mydb.stock";
+        query = "SELECT * FROM cheer.usuarios";
         
         productoData = BaseDatosFx.consultar(query);
         
         try {
 
             
-            producto resProducto = productoData.get(5100);
+            producto resProducto = productoData.get(6);
 
-//            for (int i = 1; i<=10 ; i++)
-//                System.out.print(resProducto.getDataByIndex(i) + "\t");
+            for (int i = 1; i<=2 ; i++)
+                System.out.print(resProducto.getDataByIndex(i) + "\t");
             
         } catch (Exception ex) {
             System.out.println(ex);

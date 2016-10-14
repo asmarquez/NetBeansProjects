@@ -1,0 +1,16 @@
+<jsp:useBean id="firmante" class="pk.Usuario" scope="session"/>
+<jsp:setProperty name="firmante" property="*"/> 
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1> Éstos son tus datos:</h1>
+        <p>Nombre: <jsp:getProperty name="firmante" property="nombre" /></p>
+        <p>E-mail: <jsp:getProperty name="firmante" property="email" /></p>
+        <p>Edad: <jsp:getProperty name="firmante" property="edad" /></p>
+        <a href="/JavaEECurso/Anhadir.jsp">Confirmar la firma </a> o
+        <a href="/JavaEECurso/Peticion.jsp">Volver al formulario</a>
+    </body>
+</html>
+
